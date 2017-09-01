@@ -1,6 +1,6 @@
 class zabbix_agent { 
   class { 'zabbix::agent':
-    server    => '3.3.3.2',
+    server    => '3.3.3.4',
     hostname  => $facts['fqdn'],
     #+listen_ip+serveractive+
   }

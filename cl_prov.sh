@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #Hosts
-echo "3.3.3.3 vm1 vm1.minsk.epam.com" >> /etc/hosts
+echo "3.3.3.3 pe pe.minsk.epam.com" >> /etc/hosts
 
 #PuppetAgent Opensource
-curl -k https://vm1.minsk.epam.com:8140/packages/current/install.bash | sudo bash
+curl -k https://pe.minsk.epam.com:8140/packages/current/install.bash | sudo bash
 
 #Add server configuration
 
