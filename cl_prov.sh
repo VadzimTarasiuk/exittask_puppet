@@ -12,8 +12,5 @@ curl -k https://vm1.minsk.epam.com:8140/packages/current/install.bash | sudo bas
 #puppet agent --enable
 #puppet agent -t --server vm1.minsk.epam.com
 
-#sleep 10s
-#/opt/puppetlabs/bin/puppet agent -t
-
 #FACTS GATHERING
 #facter -p | less
