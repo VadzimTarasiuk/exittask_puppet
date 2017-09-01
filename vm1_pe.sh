@@ -16,12 +16,10 @@ cp /vagrant/pe.conf ./
 /opt/puppetlabs/bin/puppet module install puppetlabs-concat -f --version 4.0.1
 
 #cp /varant/mysql_class.pp /etc/puppetlabs/code/environments/production/modules
-cp /vagrant/database.pp /etc/puppetlabs/code/environments/production/manifests
 cp /vagrant/zabbix_master.pp /etc/puppetlabs/code/environments/production/manifests
 cp /vagrant/zabbix_agent.pp /etc/puppetlabs/code/environments/production/manifests
 #templates for configuration
 cp /vagrant/php.ini.epp /etc/puppetlabs/code/environments/production/modules/apache/templates
-cp /vagrant/zabbix.conf.epp /etc/puppetlabs/code/environments/production/modules/zabbix/templates
 cp /vagrant/zabbix_agentd.conf.epp /etc/puppetlabs/code/environments/production/modules/zabbix/templates
 
 cat >> /etc/puppetlabs/code/environments/production/manifests/site.pp <<- EOM
