@@ -2,7 +2,6 @@
 
 **Required and used Forge-modules:**
 ```bash
-puppet module install puppet-zabbix -f --version 4.1.3
 puppet module install puppetlabs-mysql -f --version 3.11.0
 puppet module install puppetlabs-apache -f
 puppet module install puppetlabs-concat -f --version 4.0.1
