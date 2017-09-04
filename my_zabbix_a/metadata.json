@@ -1,0 +1,20 @@
+{
+  "name": "my_zabbix_a",
+  "version": "1.0.0",
+  "author": "Vadzim Tarasiuk",
+  "summary": "Installs and configures Zabbix Agent",
+  "license": "Apache-2.0",
+  "source": "git://github.com/VadzimTarasiuk/exittask_puppet.git",
+  "project_page": "http://github.com/VadzimTarasiuk/exittask_puppet.git",
+  "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
+  "dependencies": [
+  ],
+  "data_provider": null,
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 5.0.0"
+    }
+  ],
+  "description": "My Zabbix agent module"
+}

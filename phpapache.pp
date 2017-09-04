@@ -1,3 +1,4 @@
+#Class for install web server needed for zabbix
 class phpapache {
   class { 'apache':
     mpm_module => 'prefork',
@@ -9,7 +10,7 @@ class phpapache {
     ensure  => file,
     content => template('apache/php.ini.epp'),
   }
-  
+
   file { '/etc/httpd/conf.d/zabbix.conf':
     ensure  => file,
     content => '

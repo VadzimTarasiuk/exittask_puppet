@@ -1,4 +1,9 @@
-class my_zabbix_a { 
+#some definition of this crap code...
+class my_zabbix_a {
+
+  $agent_fqdn = $facts['fqdn']
+  $server_ip = '3.3.3.4'
+
   exec { 'rpm zabbix-release':
     cwd     => '/tmp',
     path    => '/usr/bin:/usr/sbin:/bin',
@@ -11,7 +16,7 @@ class my_zabbix_a {
   }
   file { '/etc/zabbix/zabbix_agentd.conf':
     ensure  => file,
-    content => template('my_zabbix_a/zabbix_agentd.conf.epp'),
+    content => template('my_zabbix_a/zabbix_agentd.conf.erb'),
     require => Package['zabbix-agent'],
   }
   service { 'zabbix-agent':
@@ -19,4 +24,6 @@ class my_zabbix_a {
     enable  => true,
     require => File['/etc/zabbix/zabbix_agentd.conf'],
   }
+
+  notify { $facts['python_ver']: }
 }

@@ -71,7 +71,8 @@ DBHost=localhost
 #	Database name.
 #	For SQLite3 path to database file must be provided. DBUser and DBPassword are ignored.
 #
-DBName=zabbix
+#DBName=zabbix
+DBName=<%= @db_name %>
 
 ### Option: DBSchema
 #	Schema name. Used for IBM DB2 and PostgreSQL.
@@ -81,13 +82,15 @@ DBName=zabbix
 ### Option: DBUser
 #	Database user. Ignored for SQLite.
 #
-DBUser=zabbix
+#DBUser=zabbix
+DBUser=<%= @db_user %>
 
 ### Option: DBPassword
 #	Database password. Ignored for SQLite.
 #	Comment this line if no password is used.
 #
-DBPassword=Zabbix_2017
+#DBPassword=Zabbix_2017
+DBPassword=<%= @db_passwd %>
 
 ### Option: DBSocket
 #	Path to MySQL socket.

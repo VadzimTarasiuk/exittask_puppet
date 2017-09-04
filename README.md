@@ -5,6 +5,7 @@
 puppet module install puppetlabs-mysql -f --version 3.11.0
 puppet module install puppetlabs-apache -f
 puppet module install puppetlabs-concat -f --version 4.0.1
+puppet module install puppetlabs-stdlib -f
 ```
 *_TODO_*:
 

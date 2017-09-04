@@ -1,4 +1,10 @@
+#some definition of this crap code...
 class my_zabbix_s {
+
+  $db_name = 'zabbix'
+  $db_user = 'zabbix'
+  $db_passwd = 'Zabbix_2017'
+
   exec { 'rpm zabbix-release':
     cwd     => '/tmp',
     path    => '/usr/bin:/usr/sbin:/bin',
@@ -15,7 +21,7 @@ class my_zabbix_s {
   }
   file { '/etc/zabbix/zabbix_server.conf':
     ensure  => file,
-    content => template('my_zabbix_s/zabbix_server.conf.epp'),
+    content => template('my_zabbix_s/zabbix_server.conf.erb'),
     require => Package['zabbix-web-mysql'],
   }
   service { 'zabbix-server':
@@ -23,4 +29,5 @@ class my_zabbix_s {
     enable  => true,
     require => File['/etc/zabbix/zabbix_server.conf'],
   }
+  notify { $facts['python_ver']: }
 }

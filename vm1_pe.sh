@@ -9,8 +9,6 @@ cp /vagrant/pe.conf ./
 ./puppet-enterprise-2017.2.3-el-7-x86_64/puppet-enterprise-installer -c ./pe.conf -y
 
 #Adding DB-module + ZABBIX
-#/opt/puppetlabs/bin/puppet module install puppetlabs-mysql --version 3.11.0
-#/opt/puppetlabs/bin/puppet module install puppet-zabbix -f --version 4.1.3
 /opt/puppetlabs/bin/puppet module install puppetlabs-mysql -f --version 3.11.0
 /opt/puppetlabs/bin/puppet module install puppetlabs-apache -f
 /opt/puppetlabs/bin/puppet module install puppetlabs-concat -f --version 4.0.1
