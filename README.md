@@ -8,11 +8,11 @@ puppet module install puppetlabs-concat -f --version 4.0.1
 ```
 *_TODO_*:
 
-+ Remake _.epp_ templates in _.erb_ templates with variables (based on _$facts_?)
++ ~Remake _.epp_ templates in _.erb_ templates with variables (based on _$facts_?)~
 
-+ Static Data ===> HIERA
++ ~Add custom facts (at least one)~
 
-+ Rearrange existing code with _Roles\Profiles_ strategy
++ ~Verify the code with _lint_ and add _metadata.json_~
 
 + Automate choice of node for deployment (depends on _fqdn_?)
 
