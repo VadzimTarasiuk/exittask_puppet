@@ -111,7 +111,7 @@ ServerActive=3.3.3.4
 #	Required for active checks and must match hostname as configured on the server.
 #	Value is acquired from HostnameItem if undefined.
 #
-Hostname=<%= $facts['fqdn'] %>
+Hostname=zabbixagent.minsk.epam.com
 
 ### Option: HostnameItem
 #	Item used for generating Hostname if it is undefined. Ignored if Hostname is defined.
