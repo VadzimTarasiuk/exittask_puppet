@@ -20,24 +20,24 @@ Vagrant.configure("2") do |config|
     c.vm.provision "shell", path: "./vm1_pe.sh"
   end
 
-  config.vm.define "zabbix_server" do |c|
+  config.vm.define "zabbixserver" do |c|
     c.vm.box = "sbeliakou/centos-7.3-x86_64-minimal"
     c.vm.network "private_network", ip: "3.3.3.4"
-    c.vm.hostname = "zabbix_server"
+    c.vm.hostname = "zabbixserver"
     c.vm.provider "virtualbox" do |v|
       v.memory = "2048"
-      v.name = "zabbix_server"
+      v.name = "zabbixserver"
     end
     c.vm.provision "shell", path: "./cl_prov.sh"
   end
 
-  config.vm.define "zabbix_agent" do |c|
+  config.vm.define "zabbixagent" do |c|
     c.vm.box = "sbeliakou/centos-7.3-x86_64-minimal"
     c.vm.network "private_network", ip: "3.3.3.5"
-    c.vm.hostname = "zabbix_agent"
+    c.vm.hostname = "zabbixagent"
     c.vm.provider "virtualbox" do |v|
       v.memory = "512"
-      v.name = "zabbix_agent"
+      v.name = "zabbixagent"
     end
     c.vm.provision "shell", path: "./cl_prov.sh"
   end

@@ -1,6 +1,10 @@
-class zabbix_master {
-  exec { 'rpm -ivh http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-1.el7.centos.noarch.rpm':  
-    notify => Package['zabbix-server-mysql'],
+class my_zabbix_s {
+  exec { 'rpm zabbix-release':
+    cwd     => '/tmp',
+    path    => '/usr/bin:/usr/sbin:/bin',
+    creates => '/usr/share/doc/zabbix-release-3.4',
+    command => 'rpm -ivh  http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-1.el7.centos.noarch.rpm',
+    notify  => Package['zabbix-server-mysql'],
   }
   package { 'zabbix-server-mysql':
     ensure => 'installed',

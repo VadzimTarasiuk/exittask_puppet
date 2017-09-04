@@ -225,7 +225,7 @@ MaxHousekeeperDelete=500
 ### Option: SenderFrequency
 #   How often Zabbix will try to send unsent alerts (in seconds).
 #
-SenderFrequency=30
+#SenderFrequency=30
 
 ### Option: CacheSize
 #   Size of configuration cache, in bytes.
@@ -380,7 +380,7 @@ User=zabbix
 #   You may include individual files or all files in a directory in the configuration file.
 #   Installing Zabbix will create include directory in /usr/local/etc, unless modified during the compile time.
 #
-Include=/etc/zabbix/zabbix_server.conf.d
+#Include=/etc/zabbix/zabbix_server.conf.d
 
 
 
